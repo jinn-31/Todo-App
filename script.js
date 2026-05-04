@@ -146,23 +146,15 @@ taskList.addEventListener("dragover", (e) => {
     e.preventDefault();
 });
 
-taskList.addEventListener("drop", (e) => {
-    e.preventDefault();
+new Sortable(taskList, {
+    animation: 150,
+    onEnd: function (evt) {
+        const movedItem = tasks.splice(evt.oldIndex, 1)[0];
+        tasks.splice(evt.newIndex, 0, movedItem);
 
-    const target = e.target.closest("li");
-    if (!target) return;
-
-    const droppedIndex = target.getAttribute("data-index");
-
-    if (draggedIndex === null || droppedIndex === null) return;
-
-    // Swap items
-    const temp = tasks[draggedIndex];
-    tasks.splice(draggedIndex, 1);
-    tasks.splice(droppedIndex, 0, temp);
-
-    saveTasks();
-    renderTasks();
+        saveTasks();
+        renderTasks();
+    }
 });
 
 renderTasks();
