@@ -138,16 +138,22 @@ function undoDelete() {
 
 let draggedIndex = null;
 
-taskList.addEventListener("dragstart", (e) => {
-    draggedIndex = e.target.getAttribute("data-index");
-});
+new Sortable(taskList, {
+    animation: 150,
 
-taskList.addEventListener("dragover", (e) => {
-    e.preventDefault();
+    onEnd: function (evt) {
+        const movedItem = tasks.splice(evt.oldIndex, 1)[0];
+        tasks.splice(evt.newIndex, 0, movedItem);
+
+        saveTasks();
+        renderTasks();
+    }
 });
 
 new Sortable(taskList, {
     animation: 150,
+    delay: 150,
+    delayOnTouchOnly: true,
     onEnd: function (evt) {
         const movedItem = tasks.splice(evt.oldIndex, 1)[0];
         tasks.splice(evt.newIndex, 0, movedItem);
