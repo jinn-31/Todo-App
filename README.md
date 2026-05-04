@@ -5,7 +5,6 @@ This project demonstrates core front-end development concepts such as DOM manipu
 
 Date of Creation: May 4, 2026
 ---
-
 ## Features
 
 - Add new tasks
@@ -18,24 +17,18 @@ Date of Creation: May 4, 2026
 - Task filtering (All / Active / Completed)
 - Task counter
 - Responsive UI design
-
 ---
-
 ## Built With
 
 - HTML5
 - CSS3
 - JavaScript (Vanilla)
-
 ---
-
 ## Preview
 
 ![App Screenshot](screenshot1.png)
 ![App Screenshot](screenshot2.png)
-
 ---
-
 ## What I Learned
 
 - DOM manipulation and event handling
@@ -44,25 +37,18 @@ Date of Creation: May 4, 2026
 - Building interactive UI components
 - Implementing drag-and-drop functionality
 - Structuring scalable front-end projects
-
 ---
-
 ## Future Improvements
 
 - Cloud sync using backend API
 - User authentication
 - Dark/light theme toggle
 - Task due dates & reminders
-
 ---
-
 ## Author
 
 Built by: **jinn-31**  
 Aspiring Software Developer focused on web and software development.
-
 ---
-
-## 📌 Note
-
+## Note
 This project is part of my learning journey to build real-world software development skills and freelance-ready portfolio projects.
